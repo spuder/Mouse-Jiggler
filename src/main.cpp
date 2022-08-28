@@ -10,6 +10,8 @@
 
 #define LED_PIN 1
 
+// 24000 = 4 minutes
+// 54000 = 9 mimutes
 unsigned int LowerCycleTime = 24000; //Minimum Time in milli-seconds between each mouse action  Default: 10000 (10 Seconds), Max 65535ms
 unsigned int UpperCycleTime = 54000; //Maximum Time in milli-seconds between each mouse action  Default: 30000 (30 Seconds), Max 65535ms
 //Random Function will randomly execute a mouse move between these two values
