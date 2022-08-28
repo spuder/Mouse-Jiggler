@@ -24,13 +24,13 @@ What if you could make a mouse jiggler that:
 
 Several perfect devices come to mind
 
-1. [Digispark](http://digistump.com/products/1)
-![](https://s3.amazonaws.com/digistump-resources/images/m/2520dcf84a0a3bf2257c2559d7a187db.jpg)
+1. [Digispark](http://digistump.com/products/1)  
+    ![](https://s3.amazonaws.com/digistump-resources/images/m/2520dcf84a0a3bf2257c2559d7a187db.jpg)
 2. [Adafruit NeoKey](https://www.adafruit.com/product/5020)
    ![](https://cdn-shop.adafruit.com/970x728/5020-04.jpg)
 3. [Arduino Pro Micro (32u4)](https://www.amazon.com/s?k=arudino+pro+micro&crid=131WL7TFNTEXD&sprefix=arudino+pro+micro%2Caps%2C119&ref=nb_sb_noss_2)
    ![](https://cdn.sparkfun.com//assets/parts/9/3/2/6/12640-01a.jpg)
-4. [Teensy](https://www.adafruit.com/product/2419)
+4. [Teensy](https://www.adafruit.com/product/2419)  
     ![](https://www.pjrc.com/teensy/teensy40.jpg)
 5. [Adafrit Trinket M0](https://www.adafruit.com/product/3500)
     ![](https://cdn-shop.adafruit.com/970x728/3500-00.jpg)
@@ -48,7 +48,7 @@ This repo contains code for Digispark. It should be simple to add support for ot
 
 ## Installation
 
-1. In platform.io click build + upload
+1. Open vscode + platform.io and click build + upload
 
 You will get a prompt like
 ```bash
