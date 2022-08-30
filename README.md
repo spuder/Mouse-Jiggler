@@ -65,7 +65,7 @@ If it fails to upload, try a different USB 2.0 hub or add a usb extension cable.
 
 ## Warnings
 
-This is for educational purposes. Use at your own risk. The device _will_ show up with a ProductID and VendorID of digispark which may alert some paranoid IT departments. 
+This is for educational purposes. Use at your own risk. The device _will_ show up with a ProductID and VendorID of digispark.
 
 See [this article](https://ericdraken.com/usb-mouse-jiggler/) on how to modify `USB_CFG_VENDOR_ID` and `USB_CFG_DEVICE_VERSION` in the `usbconfig.h` if you want to change what brand device it appears as. 
 
