@@ -12,14 +12,17 @@ You can buy mouse jigglers on amazon for $10, however they are kind of dumb and 
 
 Furthermore if you use OSX and you 'hide' your dock, it is impossible to unhide the dock by hovering since the OS thinks you are still moving your mouse. 
 
+![](https://media.giphy.com/media/87QraemOicX0oZghsW/giphy.gif)
+
 ## Vision
 
 What if you could make a mouse jiggler that:
 
 - Moved at random intervals (between 1 and 10 minutes)
-- Moved a random direction
 - Was more reliable
 - Cost less than $10
+- Didn't interfere with hovering over OSX dock  
+- Has a LED to show when it is moving 
 
 
 Several perfect devices come to mind
