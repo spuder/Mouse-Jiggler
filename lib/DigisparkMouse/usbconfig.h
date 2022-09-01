@@ -213,7 +213,9 @@ section at the end of this file).
 
 /* -------------------------- Device Description --------------------------- */
 
-#define USB_CFG_VENDOR_ID 0xc0, 0x16
+// #define USB_CFG_VENDOR_ID 0xc0, 0x16
+#define USB_CFG_VENDOR_ID 0xA7, 0x1E
+
 /* USB vendor ID for the device, low byte first. If you have registered your
  * own Vendor ID, define it here. Otherwise you may use one of obdev's free
  * shared VID/PID pairs. Be sure to read USB-IDs-for-free.txt for rules!
@@ -222,7 +224,9 @@ section at the end of this file).
  * with libusb: 0x16c0/0x5dc.  Use this VID/PID pair ONLY if you understand
  * the implications!
  */
-#define USB_CFG_DEVICE_ID 0xda, 0x27
+// #define USB_CFG_DEVICE_ID 0xda, 0x27
+#define USB_CFG_DEVICE_ID 0x64, 0x00
+
 /* This is the ID of the product, low byte first. It is interpreted in the
  * scope of the vendor ID. If you have registered your own VID with usb.org
  * or if you have licensed a PID from somebody else, define it here. Otherwise
@@ -236,8 +240,10 @@ section at the end of this file).
 #define USB_CFG_DEVICE_VERSION  0x00, 0x01
 /* Version number of the device: Minor number first, then major number.
  */
-#define USB_CFG_VENDOR_NAME     'd','i','g','i','s','t','u','m','p','.','c','o','m'
-#define USB_CFG_VENDOR_NAME_LEN 13
+// #define USB_CFG_VENDOR_NAME     'd','i','g','i','s','t','u','m','p','.','c','o','m'
+// #define USB_CFG_VENDOR_NAME_LEN 13
+#define USB_CFG_VENDOR_NAME     'G','e','n','e','r','i','c'
+#define USB_CFG_VENDOR_NAME_LEN 7
 /* These two values define the vendor name returned by the USB device. The name
  * must be given as a list of characters under single quotes. The characters
  * are interpreted as Unicode (UTF-16) entities.
@@ -246,14 +252,18 @@ section at the end of this file).
  * obdev's free shared VID/PID pair. See the file USB-IDs-for-free.txt for
  * details.
  */
-#define USB_CFG_DEVICE_NAME     'D','i','g','i','K','e','y'
-#define USB_CFG_DEVICE_NAME_LEN 7
+// #define USB_CFG_DEVICE_NAME     'D','i','g','i','K','e','y'
+// #define USB_CFG_DEVICE_NAME_LEN 7
+#define USB_CFG_DEVICE_NAME     '2','.','4','G',' ','M','o','u','s','e'
+#define USB_CFG_DEVICE_NAME_LEN 10
 /* Same as above for the device name. If you don't want a device name, undefine
  * the macros. See the file USB-IDs-for-free.txt before you assign a name if
  * you use a shared VID/PID.
  */
-#define USB_CFG_SERIAL_NUMBER   'd','i','g','i','s','t','u','m','p','.','c','o','m',':','M','o','u','s','e'
-#define USB_CFG_SERIAL_NUMBER_LEN   19
+// #define USB_CFG_SERIAL_NUMBER   'd','i','g','i','s','t','u','m','p','.','c','o','m',':','M','o','u','s','e'
+// #define USB_CFG_SERIAL_NUMBER_LEN   19
+#define USB_CFG_SERIAL_NUMBER   '0','x','4','2'
+#define USB_CFG_SERIAL_NUMBER_LEN   4
 /* Same as above for the serial number. If you don't want a serial number,
  * undefine the macros.
  * It may be useful to provide the serial number through other means than at
@@ -277,7 +287,7 @@ section at the end of this file).
 #define USB_CFG_HID_REPORT_DESCRIPTOR_LENGTH    56
 /* Define this to the length of the HID report descriptor, if you implement
  * an HID device. Otherwise don't define it or define it to 0.
- * If you use this define, you must add a const PROGMEM character array named
+ * If you use this define, you must add a PROGMEM character array named
  * "usbHidReportDescriptor" to your code which contains the report descriptor.
  * Don't forget to keep the array and this define in sync!
  */
@@ -305,7 +315,7 @@ section at the end of this file).
  *   + USB_PROP_LENGTH(len): If the data is in static memory (RAM or flash),
  *     the driver must know the descriptor's length. The descriptor itself is
  *     found at the address of a well known identifier (see below).
- * List of static descriptor names (must be declared const PROGMEM if in flash):
+ * List of static descriptor names (must be declared PROGMEM if in flash):
  *   char usbDescriptorDevice[];
  *   char usbDescriptorConfiguration[];
  *   char usbDescriptorHidReport[];
