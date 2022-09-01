@@ -7,29 +7,44 @@
 
 #include <Arduino.h>
 #include <DigiMouse.h>
-
+             
 #define LED_PIN 1
-
-// 59000 = 59 seconds
-// 61000 = 61 seconds
-unsigned int LowerCycleTime = 59000; //Minimum Time in milli-seconds between each mouse action  Default: 10000 (10 Seconds), Max 65535ms
-unsigned int UpperCycleTime = 61000; //Maximum Time in milli-seconds between each mouse action  Default: 30000 (30 Seconds), Max 65535ms
+unsigned int LowerCycleTime = 10000; //Minimum Time in milli-seconds between each mouse action  Default: 10000 (10 Seconds), Max 65535ms
+unsigned int UpperCycleTime = 30000; //Maximum Time in milli-seconds between each mouse action  Default: 30000 (30 Seconds), Max 65535ms
 //Random Function will randomly execute a mouse move between these two values
 void setup() {
   randomSeed(analogRead(0));  //Random Seed off background noise on analog pin
-  pinMode(LED_PIN, OUTPUT); // LED (Note on some older digispark devices, the LED is on pin 0)
-  DigiMouse.begin();
+  pinMode(1, OUTPUT);
+  // DigiMouse.begin(); //start  DigiMouse.begin() is the _old_ library syntax
+  // DigiMouseDevice();
+  DigiMouse.init();
 }
 void loop() {
+//Moves mouse 1 pixel in a direction (up/down/left/right) in a square
   digitalWrite(1, HIGH);
-  DigiMouse.moveX(1); // Move 2 pixel right
-  DigiMouse.delay(25);
-  DigiMouse.moveX(-1); // Move 2 pixel left
-  DigiMouse.delay(25);
-  DigiMouse.moveY(-1); // Move 2 pixels up
-  DigiMouse.delay(25);
-  DigiMouse.moveY(1); // Move 2 pixels down
-  DigiMouse.delay(25);
-  digitalWrite(LED_PIN, LOW);
-  DigiMouse.delay(random(LowerCycleTime, UpperCycleTime));
+  DigiMouse.moveY(1000000);
+  DigiMouse.delay(50);
+  digitalWrite(1, LOW);
+  DigiMouse.delay(1000);
+
+  digitalWrite(1, HIGH);
+  DigiMouse.moveX(1000000); //
+  DigiMouse.delay(50);
+  digitalWrite(1, LOW);
+  DigiMouse.delay(1000);
+
+  digitalWrite(1, HIGH);
+  DigiMouse.moveY(-1000000);
+  DigiMouse.delay(50);
+  digitalWrite(1, LOW);
+  DigiMouse.delay(1000);
+
+  digitalWrite(1, HIGH);
+  DigiMouse.moveX(-1000000);
+  DigiMouse.delay(50);
+  digitalWrite(1, LOW);
+  DigiMouse.delay(1000);
+
+  DigiMouse.update();
+
 }
