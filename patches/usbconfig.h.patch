@@ -1,0 +1,26 @@
+224c224
+< #define USB_CFG_VENDOR_ID 0xc0, 0x16
+---
+> #define USB_CFG_VENDOR_ID 0xA7, 0x1E
+233c233
+< #define USB_CFG_DEVICE_ID 0xda, 0x27
+---
+> #define USB_CFG_DEVICE_ID 0x64, 0x00
+247,248c247,248
+< #define USB_CFG_VENDOR_NAME     'd','i','g','i','s','t','u','m','p','.','c','o','m'
+< #define USB_CFG_VENDOR_NAME_LEN 13
+---
+> #define USB_CFG_VENDOR_NAME     'G','e','n','e','r','i','c'
+> #define USB_CFG_VENDOR_NAME_LEN 7
+257,258c257,258
+< #define USB_CFG_DEVICE_NAME     'D','i','g','i','K','e','y'
+< #define USB_CFG_DEVICE_NAME_LEN 7
+---
+> #define USB_CFG_DEVICE_NAME     '2','.','4','G',' ','M','o','u','s','e'
+> #define USB_CFG_DEVICE_NAME_LEN 10
+263,264c263,264
+< #define USB_CFG_SERIAL_NUMBER   'd','i','g','i','s','t','u','m','p','.','c','o','m',':','M','o','u','s','e'
+< #define USB_CFG_SERIAL_NUMBER_LEN   19
+---
+> #define USB_CFG_SERIAL_NUMBER   '0','x','4','2'
+> #define USB_CFG_SERIAL_NUMBER_LEN   4
