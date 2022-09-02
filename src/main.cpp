@@ -15,36 +15,24 @@ unsigned int UpperCycleTime = 30000; //Maximum Time in milli-seconds between eac
 void setup() {
   randomSeed(analogRead(0));  //Random Seed off background noise on analog pin
   pinMode(1, OUTPUT);
-  // DigiMouse.begin(); //start  DigiMouse.begin() is the _old_ library syntax
-  // DigiMouseDevice();
   DigiMouse.init();
 }
 void loop() {
 //Moves mouse 1 pixel in a direction (up/down/left/right) in a square
   digitalWrite(1, HIGH);
-  DigiMouse.moveY(1000000);
+  DigiMouse.moveY(2);
   DigiMouse.delay(50);
+
+  DigiMouse.moveX(2); //s
+  DigiMouse.delay(50);
+
+  DigiMouse.moveY(-2);
+  DigiMouse.delay(50);
+
+  DigiMouse.moveX(-2);
+  DigiMouse.delay(50);
+  
   digitalWrite(1, LOW);
   DigiMouse.delay(1000);
-
-  digitalWrite(1, HIGH);
-  DigiMouse.moveX(1000000); //
-  DigiMouse.delay(50);
-  digitalWrite(1, LOW);
-  DigiMouse.delay(1000);
-
-  digitalWrite(1, HIGH);
-  DigiMouse.moveY(-1000000);
-  DigiMouse.delay(50);
-  digitalWrite(1, LOW);
-  DigiMouse.delay(1000);
-
-  digitalWrite(1, HIGH);
-  DigiMouse.moveX(-1000000);
-  DigiMouse.delay(50);
-  digitalWrite(1, LOW);
-  DigiMouse.delay(1000);
-
-  DigiMouse.update();
 
 }
